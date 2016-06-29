@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+    <context-param>
+        <param-name>fx.prp.file.name</param-name>
+        <param-value>/WEB-INF/fxCalc.prp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>fx.users.file.name</param-name>
+        <param-value>/WEB-INF/fxUsers.prp</param-value>
+    </context-param>
+    <context-param>
+        <param-name>fx.user.text.name</param-name>
+        <param-value>userName</param-value>
+    </context-param>
+    <context-param>
+        <param-name>fx.pass.text.name</param-name>
+        <param-value>userPass</param-value>
+    </context-param>
+    <context-param>
+        <param-name>db.url</param-name>
+        <param-value>jdbc:mysql://localhost:3306/csc224</param-value>
+    </context-param>
+    <context-param>
+        <param-name>db.user.text.name</param-name>
+        <param-value>admin</param-value>
+    </context-param>
+    <context-param>
+        <param-name>db.pass.text.name</param-name>
+        <param-value>1234</param-value>
+    </context-param>
+    <context-param>
+        <param-name>db.query</param-name>
+        <param-value>SELECT * FROM users WHERE username = ? AND password = ?</param-value>
+    </context-param>
+    
+    <servlet>
+        <load-on-startup>0</load-on-startup>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.csc224.login.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+</web-app>

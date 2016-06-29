@@ -1,0 +1,7 @@
+dst.amt=dstAmt
+dst.cucy=dstCucy
+fx.rates.file.dlmtr=,
+fx.rates.file.name=/WEB-INF/fxRates.csv
+src.amt=srcAmt
+src.cucy=srcCucy
+db.query=SELECT * FROM fxRates
