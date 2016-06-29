@@ -1,0 +1,1 @@
+This app is a game based off the popular “Whack-A-Mole” game that I created as part of my final exam. It features a pause and new game function, as well as images worked into the app.

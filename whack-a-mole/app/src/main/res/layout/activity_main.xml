@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#135f00">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTime"
+        android:text="Time: 0"
+        android:textStyle="bold"
+        android:textColor="@drawable/timer"
+        android:enabled="false"
+        android:inputType="none"
+        android:minWidth="120dp"
+        android:layout_above="@+id/btnNew"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtScore"
+        android:text="Score: 0"
+        android:textColor="@drawable/score"
+        android:textStyle="bold"
+        android:enabled="false"
+        android:inputType="none"
+        android:layout_above="@+id/btnNew"
+        android:layout_alignLeft="@+id/btnPause"
+        android:layout_alignStart="@+id/btnPause"
+        android:layout_alignRight="@+id/btnPause"
+        android:layout_alignEnd="@+id/btnPause" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pause"
+        android:id="@+id/btnPause"
+        android:minWidth="100dp"
+        android:layout_below="@+id/txtScore"
+        android:layout_alignRight="@+id/btnMole5"
+        android:layout_alignEnd="@+id/btnMole5" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Game"
+        android:id="@+id/btnNew"
+        android:minWidth="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/btnMole6"
+        android:layout_alignStart="@+id/btnMole6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game Over!\nThank you for playing!"
+        android:id="@+id/lblGameOver"
+        android:textAlignment="center"
+        android:singleLine="false"
+        android:minLines="2"
+        android:textColor="#fdeeff"
+        android:phoneNumber="false"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:layout_above="@+id/txtTime"
+        android:layout_alignRight="@+id/btnNew"
+        android:layout_alignEnd="@+id/btnNew"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMole1"
+        android:src="@drawable/mole_hole"
+        android:cropToPadding="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMole3"
+        android:src="@drawable/mole_hole"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/btnMole1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMole5"
+        android:src="@drawable/mole_hole"
+        android:layout_below="@+id/btnMole3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="31dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMole2"
+        android:src="@drawable/mole_hole"
+        android:layout_alignTop="@+id/btnMole1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMole4"
+        android:src="@drawable/mole_hole"
+        android:layout_above="@+id/btnMole5"
+        android:layout_alignLeft="@+id/btnMole2"
+        android:layout_alignStart="@+id/btnMole2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMole6"
+        android:src="@drawable/mole_hole"
+        android:layout_alignTop="@+id/btnMole5"
+        android:layout_alignLeft="@+id/btnMole4"
+        android:layout_alignStart="@+id/btnMole4" />
+
+</RelativeLayout>
